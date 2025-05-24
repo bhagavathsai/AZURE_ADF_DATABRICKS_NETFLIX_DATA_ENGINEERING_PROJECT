@@ -1,10 +1,10 @@
 #Netflix Data Engineering Project
 
-🚀 Project Overview
+##🚀 Project Overview
 
 This project demonstrates an end-to-end data engineering pipeline using Azure Data Factory (ADF), Azure Data Lake Storage Gen2 (ADLS), and Databricks (Delta Live Tables). The dataset used is Netflix content metadata sourced from a public GitHub repository. The pipeline is built in three layers: Bronze, Silver, and Gold, following the Medallion architecture.
 
-🧱 Architecture & Tools
+##🧱 Architecture & Tools
 
 
 
@@ -16,13 +16,13 @@ Databricks: Auto Loader, Delta Live Tables (DLT), workflows, and transformations
 
 Delta Lake: Format for scalable and ACID-compliant tables
 
-🪪 Data Sources
+## 🪪 Data Sources
 
-Dataset: Netflix Titles on GitHub
+## Dataset: Netflix Titles on GitHub
 
 Files: netflix_cast.csv, netflix_directors.csv, netflix_countries.csv, netflix_categories.csv, netflix_titles.csv
 
-🛠️ Step-by-Step Implementation
+## 🛠️ Step-by-Step Implementation
 
 🔸 1. Data Ingestion Using ADF
 
@@ -64,7 +64,7 @@ Used Auto Loader to ingest netflix_titles.csv directly to Bronze.
 
 Workflow to run this only on Sundays using dbutils.widgets.get("weekday") logic.
 
-🧪 Gold Layer with Delta Live Tables (DLT)
+## 🧪 Gold Layer with Delta Live Tables (DLT)
 
 ✅ Quality Rules
 
@@ -108,26 +108,28 @@ def gold_netflix_titles():
     df = spark.readStream.table("LIVE.gold_trns_netflixtitles")
     return df
 
-📁 Folder Structure
+
+## 📁 Folder Structure
 
 netflix-data-engineering/
 ├── code/
-│   ├── code_notebook/
-│   └── netflix_project.dbc
+│ ├── code_notebook/
+│ └── netflix_project.dbc
 ├── dataset/
-│   ├── netflix_cast.csv
-│   ├── netflix_category.csv
-│   ├── netflix_countries.csv
-│   ├── netflix_directors.csv
-│   └── netflix_titles.csv
+│ ├── netflix_cast.csv
+│ ├── netflix_category.csv
+│ ├── netflix_countries.csv
+│ ├── netflix_directors.csv
+│ └── netflix_titles.csv
 ├── Images/
-│   ├── adf_workflow_to_bronze.jpeg
-│   ├── bronze_to_silver_for4files.jpeg
-│   ├── datalake_container.jpeg
-│   ├── dlt_gold_layer.jpeg
-│   ├── Project_Architecture.jpeg
-│   └── workflow_of_netflix_titles.jpeg
+│ ├── adf_workflow_to_bronze.jpeg
+│ ├── bronze_to_silver_for4files.jpeg
+│ ├── datalake_container.jpeg
+│ ├── dlt_gold_layer.jpeg
+│ ├── Project_Architecture.jpeg
+│ └── workflow_of_netflix_titles.jpeg
 └── README.md
+
 
 ## ✅ Features Implemented
 
@@ -144,7 +146,7 @@ netflix-data-engineering/
 ![🧭 Project Architecture](Images/Project_Architecture.jpeg)
 
 
-📈 Future Improvements
+## 📈 Future Improvements
 
 Add Power BI or Tableau dashboard on Gold layer
 
