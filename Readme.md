@@ -61,11 +61,13 @@ This project demonstrates an end-to-end **data engineering pipeline** using **Az
 
 ## 📁 Folder Structure
 
+```
 netflix-data-engineering/
 ├── code/
 ├── dataset/
 ├── Images/
 └── README.md
+```
 
 ## ✅ Features Implemented
 
