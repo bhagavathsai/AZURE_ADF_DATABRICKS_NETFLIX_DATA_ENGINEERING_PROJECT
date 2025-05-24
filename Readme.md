@@ -6,6 +6,8 @@ This project demonstrates an end-to-end data engineering pipeline using Azure Da
 
 🧱 Architecture & Tools
 
+
+
 Azure Data Factory (ADF): Data ingestion and validation from GitHub
 
 Azure Data Lake Storage Gen2 (ADLS): Centralized storage for all layers
@@ -106,7 +108,7 @@ def gold_netflix_titles():
     df = spark.readStream.table("LIVE.gold_trns_netflixtitles")
     return df
 
-🧾 Folder Structure
+📁 Folder Structure
 
 netflix-data-engineering/
 ├── code/
@@ -125,11 +127,21 @@ netflix-data-engineering/
 │   ├── dlt_gold_layer.jpeg
 │   ├── Project_Architecture.jpeg
 │   └── workflow_of_netflix_titles.jpeg
-├── README.md
+└── README.md
 
+## ✅ Features Implemented
 
-✅ Features Implemented
+- ✅ Validated GitHub file availability using ADF before ingestion
+- ✅ Ingested multiple CSV files into ADLS Bronze layer using ADF ForEach
+- ✅ Skipped one file (`netflix_titles.csv`) to demonstrate Databricks Auto Loader
+- ✅ Used Databricks workflows with widgets to process Bronze → Silver layers
+- ✅ Scheduled a conditional run of Auto Loader workflow only on Sundays
+- ✅ Implemented Delta Live Tables (DLT) to build Gold layer with expectations
+- ✅ Applied data quality rules using `@dlt.expect_all` and `@dlt.expect_or_drop`
 
+## 🧭 **Project Architecture**
+
+![🧭 Project Architecture](Images/Project_Architecture.jpeg)
 
 
 📈 Future Improvements
@@ -142,6 +154,6 @@ Add column-level data quality checks (null %, data type expectations)
 
 📬 Contact
 
-For questions or collaboration, reach out at [your-email@example.com]
+For questions or collaboration, reach out at [bhagavathsaidarapureddy@gmail.com]
 
 Built with 💻 Databricks, ADF, and Delta Lake
