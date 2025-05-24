@@ -64,9 +64,23 @@ This project demonstrates an end-to-end **data engineering pipeline** using **Az
 ```
 netflix-data-engineering/
 ├── code/
+│ ├── code_notebook/
+│ └── netflix_project.dbc
 ├── dataset/
+│ ├── netflix_cast.csv
+│ ├── netflix_category.csv
+│ ├── netflix_countries.csv
+│ ├── netflix_directors.csv
+│ └── netflix_titles.csv
 ├── Images/
+│ ├── adf_workflow_to_bronze.jpeg
+│ ├── bronze_to_silver_for4files.jpeg
+│ ├── datalake_container.jpeg
+│ ├── dlt_gold_layer.jpeg
+│ ├── Project_Architecture.jpeg
+│ └── workflow_of_netflix_titles.jpeg
 └── README.md
+
 ```
 
 ## ✅ Features Implemented
